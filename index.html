@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="نمونه تعاملی ورود رانندگان تپسی و ثبت‌نام راننده جدید">
+<title>تپسی رانندگان | نمونه ورود و ثبت‌نام</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#246afb;--ink:#111827;--muted:#667085;--border:#d5dae1;--gray:#f1f3f5;--page:#eef2f7}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font-family:Vazirmatn,Tahoma,sans-serif;color:var(--ink);background:var(--page)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #8ab2ff;outline-offset:2px}
+.site{min-height:100%;display:flex;justify-content:center;align-items:center;gap:48px;padding:24px}.info{width:280px;direction:rtl;text-align:right}.info h1{font-size:23px;line-height:1.8;margin:0 0 9px}.info p{font-size:14px;color:#536174;line-height:2}.info .hint{font-size:12px;color:#64748b;background:white;border:1px solid #e5e7eb;padding:14px;border-radius:12px}.info a{color:var(--blue)}
+.device{width:360px;height:min(760px,calc(100dvh - 40px));min-height:610px;background:white;border:1px solid #e1e4e9;border-radius:21px;box-shadow:0 16px 48px #34405420;position:relative;overflow:hidden;flex-shrink:0}.status{height:35px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;direction:ltr;font-family:Arial,sans-serif;color:#4c5561;font-size:12px}.status .symbols{font-size:11px}.screen{height:calc(100% - 65px);position:relative;padding:0 18px}.nav{position:absolute;bottom:0;right:0;left:0;height:30px;display:flex;align-items:center;justify-content:space-around;color:#9aa1ab;font:20px Arial,sans-serif;direction:ltr}.nav span:last-child{transform:rotate(180deg)}.view{display:none;height:100%;position:relative}.view.active{display:block}
+.logo{display:flex;align-items:center;justify-content:center;gap:8px;direction:ltr}.logo-mark{display:grid;gap:4px}.logo-mark i{height:6px;width:27px;background:var(--blue);display:block}.logo-mark i:first-child{width:17px;justify-self:end}.logo-text{font-weight:800;font-size:33px;color:#080808}
+.vehicle-logo{position:absolute;top:29%;left:0;right:0}.vehicle-bottom{position:absolute;bottom:45px;left:0;right:0}.vehicle-bottom p{text-align:center;font-weight:500;font-size:12px;margin:0 0 18px}.vehicle-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vehicle-card{height:118px;border:2px solid transparent;background:#f1f3f4;border-radius:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;color:#171717;font-size:12px;font-weight:700}.vehicle-card svg{width:100px;height:65px}.vehicle-card:hover,.vehicle-card:focus-visible{border-color:var(--blue);background:#ecf3ff}
+.back{position:absolute;top:5px;right:0;border:0;background:transparent;padding:10px;display:grid;place-items:center;transform:scaleX(-1);color:#202632}.back svg{width:21px;height:21px}.heading{padding-top:74px;text-align:right}.heading h2{font-size:17px;font-weight:800;margin:0 0 3px;line-height:1.7}.heading p{font-size:11.5px;margin:0;color:#414853;line-height:1.9}.phone-field{margin-top:30px}.input{direction:ltr;text-align:left;width:100%;height:49px;border-radius:5px;border:1.5px solid #7f8792;padding:0 12px;font:15px Arial,sans-serif;color:#151515;background:#fafafa;letter-spacing:.3px}.input:focus{border-color:var(--blue);outline:none;background:white}.error{color:#d72c2c;min-height:18px;font-size:11px;margin-top:5px;display:block}.bottom-actions{position:absolute;bottom:23px;left:0;right:0}.legal{text-align:center;font-size:10.5px;margin:0 0 16px}.legal a{color:var(--blue);text-decoration:underline}.primary{width:100%;height:47px;border:0;background:var(--blue);border-radius:22px;color:white;font-size:14px;font-weight:700}.primary:disabled{background:#f0f1f2;color:#c7c9cb;cursor:not-allowed}.secondary-card{margin-top:14px;background:white;border:1px solid #d8dde5;box-shadow:0 2px 6px #0000000b;border-radius:9px;padding:12px 14px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:right}.secondary-card .title{display:block;font-size:12px;color:#252830;font-weight:700}.secondary-card .link{color:var(--blue);display:block;font-size:12px;font-weight:700;margin-top:3px}.secondary-card svg{width:20px;height:20px;color:var(--blue)}.secondary-card:hover{border-color:var(--blue);background:#f9fbff}.otp-input{direction:ltr;display:flex;gap:7px;justify-content:space-between;margin-top:42px}.otp-digit{height:51px;width:45px;text-align:center;border-radius:6px;border:1.5px solid #cdd2d9;background:white;font:22px Arial,sans-serif}.otp-digit:focus{outline:none;border-color:var(--blue)}.otp-resend{text-align:center;margin-top:56px;font-size:12px;color:#8b929f}.otp-back{text-align:center;margin-top:30px}.otp-back button{border:0;background:none;color:var(--blue);text-decoration:underline;font-size:12px}.demo-note{margin-top:24px;border-radius:10px;background:#eef4ff;padding:11px;color:#365a90;font-size:11px;line-height:1.8;text-align:center}.done{text-align:center;padding-top:165px}.done .check{margin:0 auto 20px;background:#e3f7ec;color:#159e60;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-size:36px}.done h2{font-size:20px}.done p{color:var(--muted);line-height:2;font-size:13px}.done button{margin-top:28px}
+.webview{display:none;height:calc(100% - 65px);position:relative}.webview.active{display:block}.browser-bar{display:flex;gap:8px;align-items:center;padding:8px 6px;background:#f4f5f6;direction:ltr}.browser-close{border:0;background:transparent;font-size:24px;line-height:1;padding:1px 6px}.browser-url{background:#e8eaed;padding:8px 12px;border-radius:20px;font:12px Arial,sans-serif;flex:1}.browser-content{padding:50px 22px;text-align:center}.browser-content h2{font-size:18px}.browser-content p{font-size:12px;color:var(--muted);line-height:2}.browser-content .primary{margin-top:24px}.browser-content .url-note{margin-top:15px;direction:ltr;font:12px Arial,sans-serif;color:var(--blue)}
+@media(max-width:700px){.site{padding:0;background:white}.info{display:none}.device{border:0;border-radius:0;width:100%;max-width:420px;height:100dvh;min-height:550px;box-shadow:none}.screen{padding:0 20px}.status{padding:0 20px}}
+</style>
+</head>
+<body>
+<main class="site">
+<aside class="info">
+<h1>نمونه تعاملی ورود رانندگان تپسی</h1>
+<p>انتخاب وسیله نقلیه، ورود با شماره موبایل، دریافت کد تایید و لینک ثبت‌نام راننده جدید.</p>
+<div class="hint">این نسخه فقط یک پروتوتایپ است. پیامک واقعی ارسال نمی‌شود و هیچ اطلاعاتی روی سرور ذخیره نمی‌شود. برای تست، کد تایید <strong>۱۲۳۴۵۶</strong> را وارد کنید.</div>
+<p><a href="https://join.tapsi.ir/driver" target="_blank" rel="noopener noreferrer">صفحه واقعی ثبت‌نام رانندگان ↗</a></p>
+</aside>
+<section class="device" aria-label="نمونه موبایلی ورود رانندگان">
+<div class="status"><span>15:28</span><span class="symbols">◆ ◕ ▴ 54% ▰</span></div>
+<div class="screen">
+<section id="vehicle" class="view active" aria-label="انتخاب وسیله نقلیه">
+<div class="vehicle-logo logo"><span class="logo-mark"><i></i><i></i></span><span class="logo-text">تپسی</span></div>
+<div class="vehicle-bottom"><p>وسیله نقلیه خود را انتخاب کنید.</p><div class="vehicle-grid">
+<button class="vehicle-card" data-vehicle="car" aria-label="انتخاب خودرو">
+<svg viewBox="0 0 120 75" aria-hidden="true"><ellipse cx="61" cy="61" rx="49" ry="8" fill="#dce1e7"/><path d="M19 45 34 29Q42 21 58 21H81Q92 22 100 39L108 44Q111 47 110 54L105 59H17L12 54V48Z" fill="#c7cfd9" stroke="#545d6b" stroke-width="1.5"/><path d="M39 29H79Q87 29 92 40H30Z" fill="#485b73"/><path d="M29 40 39 29" stroke="#eef3fa" stroke-width="2"/><circle cx="34" cy="58" r="8" fill="#303944"/><circle cx="88" cy="58" r="8" fill="#303944"/><circle cx="34" cy="58" r="3.5" fill="#bec6ce"/><circle cx="88" cy="58" r="3.5" fill="#bec6ce"/></svg><span>خودرو</span></button>
+<button class="vehicle-card" data-vehicle="bike" aria-label="انتخاب موتور">
+<svg viewBox="0 0 120 75" aria-hidden="true"><ellipse cx="64" cy="63" rx="44" ry="6" fill="#dce1e7"/><circle cx="37" cy="54" r="14" fill="none" stroke="#313d4b" stroke-width="4"/><circle cx="92" cy="54" r="14" fill="none" stroke="#313d4b" stroke-width="4"/><path d="M38 53 55 32 72 53 91 53 76 31H55L48 21M72 53 65 22 80 22" stroke="#465665" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 28H62L72 35H51Z" fill="#a9bbc8"/><rect x="69" y="12" width="24" height="19" rx="2" fill="#e7dfcf" stroke="#c0b8a6"/><path d="M41 17 50 21" stroke="#45515e" stroke-width="3"/></svg><span>موتور</span></button>
+</div></div>
+</section>
+<section id="phone" class="view" aria-label="شماره موبایل">
+<button class="back" data-back="vehicle" aria-label="بازگشت"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 14 0m-6-6 6 6-6 6"/></svg></button>
+<div class="heading"><h2>شماره موبایل خود را وارد کنید</h2><p>کد تایید به این شماره پیامک می‌شود.</p></div>
+<div class="phone-field"><label class="sr-only" for="mobile">شماره موبایل</label><input id="mobile" class="input" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="09..." aria-describedby="phone-error"><span id="phone-error" class="error" role="status"></span></div>
+<div class="bottom-actions"><p class="legal">مطالعه <a href="#" id="terms">قوانین و مقررات</a> تپسی</p><button id="request-otp" class="primary" disabled>دریافت کد</button>
+<button id="register" class="secondary-card" type="button"><div><span class="title">هنوز راننده تپسی نیستید؟</span><span class="link">همین حالا ثبت‌نام کنید</span></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M2 21c0-5 3-8 7-8 2 0 3.7.5 5 1.7M18 14v8m-4-4h8"/></svg></button>
+</div></section>
+<section id="otp" class="view" aria-label="کد تایید">
+<button class="back" data-back="phone" aria-label="بازگشت"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 14 0m-6-6 6 6-6 6"/></svg></button>
+<div class="heading"><h2>کد تایید را وارد کنید</h2><p>کد ۶ رقمی ارسال شده به <span id="otp-phone" dir="ltr"></span></p></div>
+<div class="otp-input" dir="ltr" id="otp-fields" aria-label="کد تایید شش رقمی"></div><p class="otp-resend">ارسال مجدد کد (۴۸)</p><div class="otp-back"><button id="change-number">شماره اشتباه است؟</button></div><div class="demo-note">نسخه نمایشی: کد تایید ۱۲۳۴۵۶ است.</div><span id="otp-error" class="error" role="status"></span>
+</section>
+<section id="success" class="view" aria-label="ورود موفق">
+<div class="done"><div class="check">✓</div><h2>ورود موفقیت‌آمیز</h2><p>به نسخه نمایشی تپسی خوش آمدید.</p><button id="restart" class="primary">شروع مجدد</button></div>
+</section>
+<section id="webview" class="webview" aria-label="ثبت‌نام رانندگان">
+<div class="browser-bar"><button class="browser-close" id="close-web" aria-label="بستن">×</button><span class="browser-url">🔒 join.tapsi.ir/driver</span></div><div class="browser-content"><div class="logo"><span class="logo-mark"><i></i><i></i></span><span class="logo-text">تپسی</span></div><h2>ثبت‌نام راننده جدید</h2><p>در اپلیکیشن واقعی، صفحه ثبت‌نام رانندگان داخل WebView باز می‌شود. در این پروتوتایپ تحت وب، برای جلوگیری از محدودیت نمایش سایت‌های دیگر در iframe، صفحه واقعی در تب جدید باز می‌شود.</p><button class="primary" id="open-real">باز کردن صفحه ثبت‌نام</button><p class="url-note">https://join.tapsi.ir/driver</p></div>
+</section>
+</div><div class="nav" aria-hidden="true"><span>Ⅲ</span><span>○</span><span>‹</span></div>
+</section>
+</main>
+<script>
+(function(){
+'use strict';
+var screens=['vehicle','phone','otp','success','webview'];
+var phone=document.getElementById('mobile');
+var request=document.getElementById('request-otp');
+var otpFields=document.getElementById('otp-fields');
+var digits=[];
+function show(id){screens.forEach(function(s){document.getElementById(s).classList.toggle('active',s===id)});window.scrollTo(0,0);}
+function validPhone(v){return /^09\d{9}$/.test(v);}
+function normalized(v){return v.replace(/[۰-۹]/g,function(c){return String(c.charCodeAt(0)-1776)}).replace(/[٠-٩]/g,function(c){return String(c.charCodeAt(0)-1632)}).replace(/\D/g,'');}
+document.querySelectorAll('[data-vehicle]').forEach(function(b){b.addEventListener('click',function(){show('phone');phone.focus();});});
+document.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.back)});});
+phone.addEventListener('input',function(){phone.value=normalized(phone.value).slice(0,11);request.disabled=!validPhone(phone.value);document.getElementById('phone-error').textContent='';});
+request.addEventListener('click',function(){if(!validPhone(phone.value)){document.getElementById('phone-error').textContent='شماره موبایل معتبر وارد کنید.';return;}document.getElementById('otp-phone').textContent=phone.value;digits.forEach(function(d){d.value=''});document.getElementById('otp-error').textContent='';show('otp');digits[0].focus();});
+for(var i=0;i<6;i++){(function(index){var field=document.createElement('input');field.type='text';field.inputMode='numeric';field.autocomplete=index===0?'one-time-code':'off';field.maxLength=1;field.className='otp-digit';field.setAttribute('aria-label','رقم '+(index+1));field.addEventListener('input',function(){field.value=normalized(field.value).slice(-1);if(field.value&&index<5)digits[index+1].focus();if(digits.every(function(d){return d.value.length===1})){var code=digits.map(function(d){return d.value}).join('');if(code==='123456'){show('success')}else{document.getElementById('otp-error').textContent='کد تایید نامعتبر است. کد آزمایشی: ۱۲۳۴۵۶';}}});field.addEventListener('keydown',function(e){if(e.key==='Backspace'&&!field.value&&index>0)digits[index-1].focus()});field.addEventListener('paste',function(e){var data=normalized(e.clipboardData.getData('text')).slice(0,6);if(data.length>1){e.preventDefault();data.split('').forEach(function(n,j){if(digits[index+j])digits[index+j].value=n});digits[Math.min(5,index+data.length-1)].dispatchEvent(new Event('input'));}});digits.push(field);otpFields.appendChild(field)})(i);}
+document.getElementById('change-number').addEventListener('click',function(){show('phone');phone.focus()});
+document.getElementById('restart').addEventListener('click',function(){phone.value='';request.disabled=true;show('vehicle')});
+document.getElementById('register').addEventListener('click',function(){show('webview')});
+document.getElementById('close-web').addEventListener('click',function(){show('phone')});
+document.getElementById('open-real').addEventListener('click',function(){window.open('https://join.tapsi.ir/driver','_blank','noopener,noreferrer')});
+document.getElementById('terms').addEventListener('click',function(e){e.preventDefault();alert('این بخش در نسخه نمایشی پیاده‌سازی نشده است.')});
+})();
+</script>
+</body></html>
