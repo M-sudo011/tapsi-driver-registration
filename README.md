@@ -3,8 +3,8 @@
 A static, mobile-first interactive prototype for the proposed **Option A** driver onboarding flow.
 
 ## Screens
-1. Vehicle selection — car or motorcycle. The vehicle icons and Tapsi wordmark are cropped from the reference screenshots supplied for this prototype.
-2. Phone-number login with a secondary registration link: **«هنوز راننده تپسی نیستید؟ ثبت‌نام کنید»**.
+1. Vehicle selection — car or motorcycle. The vehicle cards and Tapsi wordmark use the higher-resolution images supplied for this prototype (embedded as optimized WebP data URIs).
+2. Phone-number login with a clearly visible secondary registration card: **«هنوز راننده تپسی نیستید؟ ثبت‌نام راننده جدید»**. The terms link is below both actions.
 3. Six-digit OTP verification (**demo code: 123456**).
 4. Simulated login success.
 
@@ -31,5 +31,5 @@ Deployed URL: https://m-sudo011.github.io/tapsi-driver-registration/
 - UX demo only. It does not communicate with a real authentication server or send real SMS.
 - Simulated login uses any valid Iranian mobile number and OTP `123456`.
 - Persian typography uses locally available `IRANSansX` / `IRANSans`, falling back to Google Fonts Estedad, then Tahoma. The exact proprietary production font has not been supplied.
-- Cropped vehicle/logo assets come from the user's provided screenshot. These are raster reference images and should be swapped for official design-system assets before production use.
+- The logo and vehicle graphics are higher-resolution, user-supplied assets embedded as optimized WebP. For production, reference the official design-system asset files directly.
 - The registration page is an external destination rather than an embedded iframe to avoid cross-origin embedding restrictions.
