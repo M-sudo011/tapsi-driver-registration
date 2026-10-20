@@ -38,6 +38,25 @@
 .registration-link:hover,.registration-link:focus-visible{background:#eef5ff;border-color:#286df4}
 .screen .bottom-actions{bottom:29px}
 .logo-mark{display:none}
+
+/* Option A refined: registration is clearly discoverable but still secondary. */
+#phone .heading{padding-top:103px}
+#phone .heading h2{font-size:17px;line-height:1.75}
+#phone .heading p{font-size:12px}
+#phone .phone-field{margin-top:31px}
+#phone .bottom-actions{bottom:42px;display:flex;flex-direction:column;align-items:stretch}
+#phone .bottom-actions .primary{order:1}
+#phone .registration-link{order:2;margin-top:14px;min-height:89px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:10px;padding:12px 15px;background:#f5f8ff;border:1.5px solid #b2cbfc;border-radius:11px;box-shadow:none;text-decoration:none}
+#phone .registration-link:hover,#phone .registration-link:focus-visible{background:#edf4ff;border-color:#2871f5}
+#phone .registration-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;min-width:0}
+#phone .registration-copy span{font-size:12px;color:#4b5563;font-weight:500}
+#phone .registration-copy strong{font-size:15px;color:#1870f8;font-weight:750;white-space:nowrap}
+#phone .registration-arrow{font:27px Arial,sans-serif;color:#286df4;flex-shrink:0}
+#phone .registration-icon{color:#286df4;width:34px;height:34px;flex-shrink:0}
+#phone .legal{order:3;margin:37px 0 0;font-size:11px;color:#555b64;line-height:1.8;text-align:center}
+#phone .legal a{font-weight:600}
+#otp .heading{padding-top:65px}
+@media(max-height:665px){#phone .heading{padding-top:55px}#phone .bottom-actions{bottom:24px}#phone .legal{margin-top:20px}#phone .registration-link{min-height:72px}}
 </style>
 </head>
 <body>
@@ -62,8 +81,14 @@
 <button class="back" data-back="vehicle" aria-label="بازگشت"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 14 0m-6-6 6 6-6 6"/></svg></button>
 <div class="heading"><h2>شماره موبایل خود را وارد کنید</h2><p>کد تایید به این شماره پیامک می‌شود.</p></div>
 <div class="phone-field"><label class="sr-only" for="mobile">شماره موبایل</label><input id="mobile" class="input" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="09..." aria-describedby="phone-error"><span id="phone-error" class="error" role="status"></span></div>
-<div class="bottom-actions"><p class="legal">مطالعه <a href="#" id="terms">قوانین و مقررات</a> تپسی</p><button id="request-otp" class="primary" disabled>دریافت کد</button>
-<a id="register" class="registration-link" href="https://join.tapsi.ir/driver" target="_blank" rel="noopener noreferrer" aria-label="هنوز راننده تپسی نیستید؟ ثبت‌نام کنید"><span>هنوز راننده تپسی نیستید؟</span><strong>ثبت‌نام کنید ←</strong></a>
+<div class="bottom-actions">
+<button id="request-otp" class="primary" disabled>دریافت کد</button>
+<a id="register" class="registration-link" href="https://join.tapsi.ir/driver" target="_blank" rel="noopener noreferrer" aria-label="ثبت‌نام راننده جدید">
+<span class="registration-arrow" aria-hidden="true">→</span>
+<span class="registration-copy"><span>هنوز راننده تپسی نیستید؟</span><strong>ثبت‌نام راننده جدید</strong></span>
+<svg class="registration-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M3 27v-3c0-5 4-9 9-9s9 4 9 9v3H3Z"/><path d="M26 13v12m-6-6h12"/></svg>
+</a>
+<p class="legal">با ادامه، <a href="#" id="terms">قوانین و مقررات</a> تپسی را می‌پذیرید.</p>
 </div></section>
 <section id="otp" class="view" aria-label="کد تایید">
 <button class="back" data-back="phone" aria-label="بازگشت"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 14 0m-6-6 6 6-6 6"/></svg></button>
